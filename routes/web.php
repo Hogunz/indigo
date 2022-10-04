@@ -21,6 +21,15 @@ Route::get('/index', function () {
     return view('index');
 });
 
+Route::get('/supplier', function () {
+    return view('supplier');
+});
+
+Route::get('/viewas', function () {
+    return view('viewas');
+});
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
