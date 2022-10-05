@@ -1,6 +1,6 @@
 <x-guest-layout>
 
-   <div class="container pt-24 mx-auto min-h-screen ">
+   <div class="container pt-16 mx-auto min-h-screen ">
       <div class="p-4">
          <div class="relative ">
             <video class="w-2/3 mx-auto " autoplay loop muted controls style="pointer-events:none;">
@@ -8,7 +8,7 @@
             </video>
             <div class="max-w-7xl mx-auto absolute text-base text-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" x-data="{
                 text: '',
-                textArray : ['Suppliers'],
+                textArray : ['Coordinator', 'Event Stylist', 'Caterer', 'Venue', 'Fashion Designer', 'Hair and Make Up', 'And Many More'],
                 textIndex: 0,
                 charIndex: 0,
                 pauseEnd: 1500,
@@ -72,297 +72,276 @@
       <!--INTERACTIVE NAVBAR-->
       <div class="mb-4 border-b border-gray-200 dark:border-gray-700">
 
-         <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+         <ul class="flex flex-wrap -mb-px text-sm font-small text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+         <li class="mr-2" role="presentation">
+            <button class="inline-block p-4 rounded-t-lg border-b-2" id="alls-tab" data-tabs-target="#alls" type="button" role="tab" aria-controls="alls" aria-selected="false">EVENT COORDINATOR / PLANNER</button>
+        </li>
             <li class="mr-2" role="presentation">
-               <button class="inline-block p-4 rounded-t-lg border-b-2 text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500" id="alls-tab" data-tabs-target="#alls" type="button" role="tab" aria-controls="alls" aria-selected="true">ALL</button>
+               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="photographer-tab" data-tabs-target="#photographer" type="button" role="tab" aria-controls="photographer" aria-selected="false">EVENT STYLISTS</button>
             </li>
             <li class="mr-2" role="presentation">
-               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="photographer-tab" data-tabs-target="#photographer" type="button" role="tab" aria-controls="photographer" aria-selected="false">PHOTOGRAPHER AND VIDEO</button>
-            </li>
-            <li class="mr-2" role="presentation">
-               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="hair-tab" data-tabs-target="#hair" type="button" role="tab" aria-controls="hair" aria-selected="false">HAIR AND MAKE-UP</button>
+               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="hair-tab" data-tabs-target="#hair" type="button" role="tab" aria-controls="hair" aria-selected="false">CATERER</button>
             </li>
             <li role="presentation">
-               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="designers-tab" data-tabs-target="#designers" type="button" role="tab" aria-controls="designers" aria-selected="false">DESIGNERS</button>
+               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="designers-tab" data-tabs-target="#designers" type="button" role="tab" aria-controls="designers" aria-selected="false">HOTELS / VENUES</button>
             </li>
             <li role="presentation">
-               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="event-tab" data-tabs-target="#event" type="button" role="tab" aria-controls="event" aria-selected="false">EVENT STYLISTS</button>
+               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="event-tab" data-tabs-target="#event" type="button" role="tab" aria-controls="event" aria-selected="false">FASHION DESIGNER</button>
             </li>
             <li role="presentation">
-               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="cake-tab" data-tabs-target="#cake" type="button" role="tab" aria-controls="cake" aria-selected="false">CAKES AND SWEETS</button>
+               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="cake-tab" data-tabs-target="#cake" type="button" role="tab" aria-controls="cake" aria-selected="false">HAIR & MAKE UP</button>
             </li>
             <li role="presentation">
-               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="cocktail-tab" data-tabs-target="#cocktail" type="button" role="tab" aria-controls="cocktail" aria-selected="false">COCKTAILS AND MOBILE CAR</button>
+               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="cocktail-tab" data-tabs-target="#cocktail" type="button" role="tab" aria-controls="cocktail" aria-selected="false">CAKES AND SWEETS</button>
             </li>
             <li role="presentation">
-               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="caterer-tab" data-tabs-target="#caterer" type="button" role="tab" aria-controls="caterer" aria-selected="false">CATERERS</button>
+               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="caterer-tab" data-tabs-target="#caterer" type="button" role="tab" aria-controls="caterer" aria-selected="false">EMCEES / HOSTS</button>
             </li>
             <li role="presentation">
-               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="invitations-tab" data-tabs-target="#invitations" type="button" role="tab" aria-controls="invitations" aria-selected="false">INVITATIONS</button>
+               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="invitations-tab" data-tabs-target="#invitations" type="button" role="tab" aria-controls="invitations" aria-selected="false">INVITATIONS / SOUVENIRS</button>
             </li>
             <li role="presentation">
-               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="bridal-tab" data-tabs-target="#bridal" type="button" role="tab" aria-controls="bridal" aria-selected="false">BRIDAL CAR</button>
+               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="bridal-tab" data-tabs-target="#bridal" type="button" role="tab" aria-controls="bridal" aria-selected="false">ENTERTAINMENT</button>
             </li>
             <li role="presentation">
-               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="emcee-tab" data-tabs-target="#emcee" type="button" role="tab" aria-controls="emcee" aria-selected="false">EMCEES</button>
+               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="emcee-tab" data-tabs-target="#emcee" type="button" role="tab" aria-controls="emcee" aria-selected="false">OTHERS</button>
             </li>
-            <li role="presentation">
-               <button class="inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 dark:border-transparent text-gray-500 dark:text-gray-400 border-gray-100 dark:border-gray-700" id="music-tab" data-tabs-target="#music" type="button" role="tab" aria-controls="music" aria-selected="false">MUSICIANS / ENTERTAINMENT</button>
-            </li>
-
+         
          </ul>
       </div>
       <div id="myTabContent">
      
-
+<!--Event Coordinator-->
          <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="alls" role="tabpanel" aria-labelledby="alls-tab">
-            <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content -- <strong class="font-medium text-gray-800 dark:text-white">ALL</p>
+         <div class="grid grid-cols-4 gap-4">
+         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="alls" role="tabpanel" aria-labelledby="alls-tab">
+       
+    </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/planner/planner1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">asdasd</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/planner/planner2.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/planner/planner3.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/planner/planner4.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/planner/planner4.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div> <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/planner/planner4.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div> <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/planner/planner4.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div> <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/planner/planner4.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div> <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/planner/planner4.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div> <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/planner/planner4.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div> <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/planner/planner4.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div> <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/planner/planner4.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
          </div>
-         <!--PHOTOGRAPHER AND VIDEOS-->
+         </div>
+         <!--Event Stylist-->
          <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="photographer" role="tabpanel" aria-labelledby="photographer-tab">
-         <div class="grid grid-cols-4 gap-4">
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo1.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo2.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo3.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo4.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-         </div>
-         </div>
-         <!-- HAIR AND MAKE-UP-->
-         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="hair" role="tabpanel" aria-labelledby="hair-tab">
-         <div class="grid grid-cols-4 gap-4">
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair1.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair2.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair3.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair4.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-         </div>
-         </div>
-         <!--DESIGNER-->
-         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="designers" role="tabpanel" aria-labelledby="designers-tab">
-         <div class="grid grid-cols-4 gap-4">
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer1.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer2.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer3.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer4.jpg" alt="" style="height: 230px;width: 346px;">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-         </div>
-         </div>
-         <!-- event stylist-->
-         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="event" role="tabpanel" aria-labelledby="event-tab">
          <div class="grid grid-cols-4 gap-4">
             <div>
             <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
@@ -440,15 +419,10 @@
                </div>
             </div>
             </div>
-         </div>
-         </div>
-         <!--cake-->
-         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="cake" role="tabpanel" aria-labelledby="cake-tab">
-         <div class="grid grid-cols-4 gap-4">
             <div>
             <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
                <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake1.jpg" alt="">
+                  <img class="rounded-t-lg" src="img/supplier_pic/stylist/stylist1.jpg" alt="">
                </a>
                <div class="p-5">
                   <a href="#">
@@ -467,7 +441,7 @@
             <div>
             <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
                <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake2.jpg" alt="">
+                  <img class="rounded-t-lg" src="img/supplier_pic/stylist/stylist1.jpg" alt="">
                </a>
                <div class="p-5">
                   <a href="#">
@@ -486,7 +460,7 @@
             <div>
             <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
                <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake3.jpg" alt="">
+                  <img class="rounded-t-lg" src="img/supplier_pic/stylist/stylist1.jpg" alt="">
                </a>
                <div class="p-5">
                   <a href="#">
@@ -505,31 +479,7 @@
             <div>
             <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
                <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake4.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-         </div>
-         </div>
-         <!--COCKTAIL-->
-         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="cocktail" role="tabpanel" aria-labelledby="cocktail-tab">
-         <div class="grid grid-cols-4 gap-4">
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/cocktail/cocktail1.jpg" alt="">
+                  <img class="rounded-t-lg" src="img/supplier_pic/stylist/stylist1.jpg" alt="">
                </a>
                <div class="p-5">
                   <a href="#">
@@ -548,7 +498,7 @@
             <div>
             <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
                <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/cocktail/cocktail2.jpg" alt="">
+                  <img class="rounded-t-lg" src="img/supplier_pic/stylist/stylist1.jpg" alt="">
                </a>
                <div class="p-5">
                   <a href="#">
@@ -567,7 +517,7 @@
             <div>
             <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
                <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/cocktail/cocktail3.jpg" alt="">
+                  <img class="rounded-t-lg" src="img/supplier_pic/stylist/stylist1.jpg" alt="">
                </a>
                <div class="p-5">
                   <a href="#">
@@ -586,7 +536,26 @@
             <div>
             <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
                <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/cocktail/cocktail4.jpg" alt="">
+                  <img class="rounded-t-lg" src="img/supplier_pic/stylist/stylist1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/stylist/stylist1.jpg" alt="">
                </a>
                <div class="p-5">
                   <a href="#">
@@ -604,8 +573,8 @@
             </div>
          </div>
          </div>
-         <!--CATERER-->
-         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="caterer" role="tabpanel" aria-labelledby="caterer-tab">
+         <!-- Caterer-->
+         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="hair" role="tabpanel" aria-labelledby="hair-tab">
          <div class="grid grid-cols-4 gap-4">
             <div>
             <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
@@ -683,6 +652,1329 @@
                </div>
             </div>
             </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/caterer/caterer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/caterer/caterer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/caterer/caterer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/caterer/caterer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/caterer/caterer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/caterer/caterer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/caterer/caterer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/caterer/caterer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+
+         </div>
+         </div>
+         <!--Hotels and Venues-->
+         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="designers" role="tabpanel" aria-labelledby="designers-tab">
+         <div class="grid grid-cols-4 gap-4">
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/venue/venue1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/venue/venue2.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/venue/venue3.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/venue/venue4.jpg" alt="" >
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/venue/venue1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/venue/venue1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/venue/venue1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/venue/venue1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/venue/venue1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/venue/venue1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/venue/venue1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/venue/venue1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+
+         </div>
+         </div>
+         <!-- fashion designers-->
+         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="event" role="tabpanel" aria-labelledby="event-tab">
+         <div class="grid grid-cols-4 gap-4">
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer2.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer3.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer4.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/designer/designer1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+
+         </div>
+         </div>
+         <!--hairs & make up-->
+         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="cake" role="tabpanel" aria-labelledby="cake-tab">
+         <div class="grid grid-cols-4 gap-4">
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair2.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair3.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair4.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/hair/hair1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+
+         </div>
+         </div>
+         <!--cakes and sweets-->
+         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="cocktail" role="tabpanel" aria-labelledby="cocktail-tab">
+         <div class="grid grid-cols-4 gap-4">
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake2.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake3.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake4.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/cake/cake1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+
+         </div>
+         </div>
+         <!--emcees / hotels-->
+         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="caterer" role="tabpanel" aria-labelledby="caterer-tab">
+         <div class="grid grid-cols-4 gap-4">
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee2.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee3.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee4.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+
          </div>
          </div>
          <!--INVITATION-->
@@ -764,177 +2056,169 @@
                </div>
             </div>
             </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/invitation/invitation1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/invitation/invitation1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/invitation/invitation1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/invitation/invitation1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/invitation/invitation1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/invitation/invitation1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/invitation/invitation1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/invitation/invitation1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+
+
          </div>
          </div>
-         <!--Bridal Car-->
+         <!--Entertainment-->
          <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="bridal" role="tabpanel" aria-labelledby="bridal-tab">
          <div class="grid grid-cols-4 gap-4">
             <div>
             <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
                <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/bridal_car/bridal1.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/bridal_car/bridal2.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/bridal_car/bridal3.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/bridal_car/bridal4.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-         </div>
-         </div>
-          <!--EMCEES-->
-         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="emcee" role="tabpanel" aria-labelledby="emcee-tab">
-         <div class="grid grid-cols-4 gap-4">
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee1.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee2.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee3.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/emcee_supplier/emcee4.jpg" alt="">
-               </a>
-               <div class="p-5">
-                  <a href="#">
-                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
-                  </a>
-                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                     Show more
-                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                     </svg>
-                  </a>
-               </div>
-            </div>
-            </div>
-         </div>
-         </div>
-         <!--MUSICIANS / ENTERTAINMENT-->
-         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="music" role="tabpanel" aria-labelledby="music-tab">
-         <div class="grid grid-cols-4 gap-4">
-            <div>
-            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
-               <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/musicians_supplier/musician1.jpg" alt="" style="height:195px;width:346px;">
+                  <img class="rounded-t-lg" src="img/supplier_pic/musicians_supplier/musician1.jpg" alt="">
                </a>
                <div class="p-5">
                   <a href="#">
@@ -972,7 +2256,7 @@
             <div>
             <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
                <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/musicians_supplier/musician3.jpg" alt="" style="height:195px;width:346px;">
+                  <img class="rounded-t-lg" src="img/supplier_pic/musicians_supplier/musician3.jpg" alt="">
                </a>
                <div class="p-5">
                   <a href="#">
@@ -991,7 +2275,395 @@
             <div>
             <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
                <a href="#">
-                  <img class="rounded-t-lg" src="img/supplier_pic/musicians_supplier/musician4.jpg" alt="" style="height:195px;width:346px;">
+                  <img class="rounded-t-lg" src="img/supplier_pic/musicians_supplier/musician4.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/musicians_supplier/musician1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/musicians_supplier/musician1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/musicians_supplier/musician1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/musicians_supplier/musician1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/musicians_supplier/musician1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/musicians_supplier/musician1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/musicians_supplier/musician1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/musicians_supplier/musician1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            
+
+         </div>
+         </div>
+          <!--Others-->
+         <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="emcee" role="tabpanel" aria-labelledby="emcee-tab">
+         <div class="grid grid-cols-4 gap-4">
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo2.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo3.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo4.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo1.jpg" alt="">
+               </a>
+               <div class="p-5">
+                  <a href="#">
+                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Meetings</h5>
+                  </a>
+                  <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                  <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                     Show more
+                     <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+            </div>
+            <div>
+            <div class="max-w-sm  bg-white rounded-lg border border-gray-200 p-2 shadow-md dark:bg-gray-800 dark:border-gray-700">
+               <a href="#">
+                  <img class="rounded-t-lg" src="img/supplier_pic/photos/photo1.jpg" alt="">
                </a>
                <div class="p-5">
                   <a href="#">
@@ -1008,6 +2680,8 @@
             </div>
             </div>
          </div>
+         </div>
+      
 
       </div>
 

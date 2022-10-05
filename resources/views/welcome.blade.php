@@ -12,7 +12,7 @@
 
 
 
-    <div class="container p-4 mx-auto">
+    <div class=" p-4 pl-96 pr-96">
 
 
         <!-- CAROUSEL -->
@@ -105,26 +105,33 @@
                             </svg>
                         </div>
                     </div>
+                    
                     <div class="grid grid-row-2 gap-2 bg-violet-50 ">
                     <a href="/viewas" class=" h-12 px-4 mt-2 text-center text-base transition-colors duration-300 transform   no-underline hover:underline text-blue-600">
                             View As
                         </a>
                     </div>
+                    <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.2828797253346!2d120.33868471536098!3d16.050803944193632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x339167fd0100bfa3%3A0x392d5ed47cf7639e!2sUNIVERSIDAD%20DE%20DAGUPAN!5e0!3m2!1sen!2sph!4v1664930252461!5m2!1sen!2sph" class="w-full h-64" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    </div>
+
+                  
                 </div>
-            </div>
+            
             <div class="border-2 border-zinc-200 row-span-3 col-span-2">
                 <div class="col-span-2  p-8 ">
-                    <h1 class="font-bold text-2xl text-left" >About This Vendor</h1>
+                    <h1 class="font-bold text-2xl text-left" >About This Supplier</h1>
                     <p class="text-lg text-justify"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Taal Vista Hotel is the only premier hotel in Tagaytay that remains as the top destination for weddings and social events. It is also known for catering numbers of intimate to large scale for life celebrations by providing the highest hospitality standards. Its lavish rooms and facilities, spacious and pillarless ballrooms, including the spectacular scenery from gardens and amazing Taal Lake View for that social media photo-worthy creates memorable experiences and fulfill guest’s expectations.
                         https://www.taalvistahotel.com .</p>
                 </div>
                 <hr>
                 
-                <div class="p-8 ">
+                <div class="p-8">
                     <hr>
                     <h1 class="font-bold text-lg text-left  ">PHOTOS</h1>
                 </div>
-                <div class="grid grid-cols-3 p-2 gap-4">
+                <div class="grid grid-cols-3 p-2 gap-2">
                     <div class="border-2 border-zinc-200">
                         <img src="img/weddingphoto1.jpg" alt="">
                     </div>

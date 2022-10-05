@@ -43,11 +43,11 @@
 
 </head>
 
-<body class="">
+<body class=""style ="background-color:#F9ECEC;" >
     <!-- ... -->
     <!-- component -->
-    <div class="  ">
-        <header class="  bg-blue-50 border-b dark:bg-gray-900 dark:border-gray-700 lg:w-full lg:top-0 lg:left-0 lg:z-30">
+    <div class="">
+        <header class="  border-b border-transparent   shadow-md dark:bg-gray-900 dark:border-gray-700 lg:w-full lg:top-0 lg:left-0 lg:z-30" style="background-color:#F0D9DA;">
             <div class="container px-4 py-5 mx-auto space-y-4 lg:space-y-0 lg:flex lg:items-center lg:justify-between lg:space-x-10 pt-0 pl-0 pb-0">
                 <div class="flex justify-between">
                     <a href="/index" class="text-gray-800 dark:text-gray-200">
@@ -69,7 +69,7 @@
 
                 <div class="hidden lg:flex lg:flex-row lg:items-center lg:justify-between lg:flex-1 lg:space-x-2">
                     <div class="flex flex-col space-y-3 lg:space-y-0 lg:flex-row lg:space-x-6 xl:space-x-8 lg:items-center">
-                        <a href="#" class="text-gray-500 dark:text-gray-200 hover:text-gray-800 dark:hover:text-gray-400 transition-colors duration-300" href="/">Home</a>
+                        <a href="/index" class="text-gray-500 dark:text-gray-200 hover:text-gray-800 dark:hover:text-gray-400 transition-colors duration-300" href="/">Home</a>
                         <a href="supplier" class="text-gray-500 dark:text-gray-200 hover:text-gray-800 dark:hover:text-gray-400 transition-colors duration-300" href="/">Supplier</a>
 
 
@@ -78,33 +78,34 @@
                                 <span>Category</span>
                             </button>
                         </dropdown> -->
-                        <div class="span-2">
-                            <button class="border rounded-full bg-indigo-100 hover:bg-violet-200 px-2 py-2 ">
-                                LIST YOUR VENUES
-                            </button>
-                            <button class="border rounded-full bg-indigo-100 hover:bg-violet-200 px-2 py-2 ">
-                                LIST YOUR SERVICES
-                            </button>
-                        </div>
+                        <!-- <div class="span-2">
+                        <button class=" text-gray-500 hover:text-blue-400 py-2 px-2"  type="button">
+                            LIST YOUR VENUES
+                        </button>
+                        <button class=" text-gray-500 hover:text-blue-400 py-2 px-2" type="button">
+                            LIST YOUR SERVICES
+                        </button>
+                            
+                        </div> -->
                     </div>
 
                     <div class="flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:items-center lg:space-x-4">
                         <form action="" class="flex flex-wrap justify-between md:flex-row">
-                            <input type="search" name="query" class=" rounded-none w-full h-12 px-4 text-sm text-gray-700 bg-white border border-gray-200  lg:w-20 xl:transition-all xl:duration-300 xl:w-36 xl:focus:w-44 lg:h-10 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-primary dark:focus:border-primary focus:outline-none focus:ring focus:ring-primary dark:placeholder-gray-400 focus:ring-opacity-20" placeholder="Search Supplier" required>
+                            <input type="search" name="query" class=" rounded-l-lg w-full h-12 px-4 text-sm text-gray-700 bg-white border border-gray-200  lg:w-20 xl:transition-all xl:duration-300 xl:w-36 xl:focus:w-44 lg:h-10 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-primary dark:focus:border-primary focus:outline-none focus:ring focus:ring-primary dark:placeholder-gray-400 focus:ring-opacity-20" placeholder="Search Supplier" required>
                             <input type="search" name="query" class=" rounded-none w-full h-12 px-4 text-sm text-gray-700 bg-white border border-gray-200  lg:w-20 xl:transition-all xl:duration-300 xl:w-36 xl:focus:w-44 lg:h-10 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-primary dark:focus:border-primary focus:outline-none focus:ring focus:ring-primary dark:placeholder-gray-400 focus:ring-opacity-20" placeholder="Search Location" required>
-                            <button id="btnSearch" class="button border rounded-full  bg-red-600 rounded-l-lg px-2 py-2 " style="line-height: 1.15;">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class="w-5 h-5">
-                                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                            <button style="background-color:#C8D9EB;" id="btnSearch" class="button border border-transparent rounded-full   rounded-l-lg px-2 py-2 " style="line-height: 1.15;">
+                                <svg mlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" class=" w-5 h-5">
+                                    <path  strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
                                 </svg>
                             </button>
                         </form>
-                        <a href=" " class="flex items-center justify-center h-12 px-4 mt-2 text-center text-base transition-colors duration-300 transform   no-underline hover:underline text-red-600">
+                        <a href=" " class="flex items-center justify-center h-12 px-4 mt-2 text-center text-base transition-colors duration-300 transform   no-underline hover:underline text-red-400">
                             Become a Vendor
                         </a>
 
 
                         <!-- Modal toggle -->
-                        <button class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" data-modal-toggle="authentication-modal">
+                        <button style="background-color:#C8D9EB;" class="border border-transparent block text-white hover:text-blue-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center " type="button" data-modal-toggle="authentication-modal">
                             Log In
                         </button>
 
@@ -123,7 +124,7 @@
                                     <div class="border rounded-lg bg-white py-6 px-6 lg:px-8">
                                         <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Sign in </h3>
                                         <form class="space-y-6" action="{{ route('login') }}">
-                                            <a class="px-7 py-3 rounded-full text-white font-medium text-sm leading-snug uppercase  shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3" style="background-color: #3b5998" href="#!" role="button" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                                            <a class="  px-7 py-3 rounded-full text-white font-medium text-sm leading-snug uppercase  shadow-md hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg transition duration-150 ease-in-out w-full flex justify-center items-center mb-3" style="background-color: #3b5998" href="#!" role="button" data-mdb-ripple="true" data-mdb-ripple-color="light">
                                                 <!-- Facebook -->
                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="w-3.5 h-3.5 mr-2">
                                                     <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
